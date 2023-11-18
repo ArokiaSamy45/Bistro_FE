@@ -1,13 +1,455 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Advent Pro', sans-serif;
+font-family: 'Big Shoulders Inline Text', cursive;
+font-family: 'Montserrat', sans-serif;
+}
+ 
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.background-container {
+  background-image: url(../src/asset/Banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Prevent image repeat */
+  height: 100vh;
+  position: relative;
+  border-radius: 10px;
+  background-color: transparent; 
+}
+
+
+@media (max-width: 768px) {
+  .background-container {
+      height: 80vh; /* Adjust the height for mobile screens */
+  }
+}
+
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items:center
+}
+
+.address,
+.contact-info {
+  padding-right: 20px;
+}
+
+.logout-button {
+  padding-left: 8px;
+}
+
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  .contact-content {
+      flex-direction: column; /* Change to column layout on mobile */
+  }
+
+  .address,
+  .contact-info {
+      width: 100%; /* Full width on mobile */
+  }
+}
+
+/* Base styles for large screens */
+.responsive-title {
+  color: orange;
+  font-size: 4em;
+}
+
+.responsive-text {
+  color: rgb(255, 230, 230);
+  font-size: 3em;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .responsive-title {
+      font-size: 3em; /* Adjust font size for smaller screens */
+  }
+
+  .responsive-text {
+      font-size: 2em; /* Adjust font size for smaller screens */
+  }
+}
+
+
+.login {
+  background-image: url(../src/asset/Food1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.login-header {
+  font-size: 2em;
+}
+
+.login-form {
+  width: 450px;
+  height: 550px;
+  margin-bottom: 1em;
+  /* border: 0.1px solid #B7AA9A; */
+  border-radius: 1em;
+  background-image: linear-gradient(to top, #F9FAFC 50%, #C3C2BE, #B7AA9A);
+  padding: 1em;
+}
+
+.log-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.signUp-head {
+  background-image: url(../src/asset/Signup.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+}
+
+.signUp-body {
+  width: 500px;
+  height: 250px;
+}
+
+.header-home {
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Base styles */
+.navbar-title {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.nav{
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  background-image: url(./asset/navbar.jpg);
+  background-color: #f8f8f8;
+  background-size: cover;
+}
+
+/* Media query for medium-sized screens */
+@media (max-width: 991px) {
+  .navbar-title {
+      font-size: 1.2em; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Media query for small screens (mobile) */
+@media (max-width: 768px) {
+  .navbar-title {
+      font-size: 1em; /* Further adjust font size for mobile */
+      margin-right: auto; /* Move the title to the left corner */
+  }
+
+  
+  .navbar .navbar-collapse {
+      flex-direction: column; /* Stack items vertically on mobile */
+      
+  }
+
+  .nav {
+      margin-top: 10px; /* Add spacing between navigation items */
+  }
+
+  .navbar-toggler {
+      margin-left: auto; /* Move the toggler to the right corner */
+  }
+
+  .btn {
+      margin-top: 10px; /* Add spacing between buttons */
+  }
+}
+
+
+.contact-us {
+  width: 100%;
+  height: 15em;
+  margin: 1em;
+}
+
+/* Base styles for all screen sizes */
+.card {
+  border-radius: 2em;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.card-text b {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.d-flex.justify-content-between.align-items-center {
+  margin-top: 1rem;
+}
+
+.d-flex.justify-content-between.align-items-center p {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.25rem 0;
+}
+
+/* Custom CSS for small screens */
+@media (max-width: 576px) {
+  .card {
+    max-width: 100%;
+  }
+  .btn {
+    font-size: 0.9rem;
+  }
+}
+
+/* Custom CSS for medium screens */
+@media (min-width: 577px) and (max-width: 992px) {
+  .card {
+    max-width: 100%;
+
+  }
+}
+
+/* Custom CSS for large screens */
+/* @media (min-width: 993px) {
+  .card {
+    max-width: 700px;
+  }
+} */
+
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+.menu-body {
+  background-color:#ffffff; 
+   /* background-image: url(./asset/doodle.jpg); */
+  background-size: cover; 
+   width: 100%;
+  height: 100%;
+  padding-top: 2em;
+}
+
+.filter-menu {
+  background-color: #ffffff;
+  margin-top: 4.5em;
+  width: 100%; /* Use full width on smaller screens */
+  max-width: 50%; /* Limit maximum width on larger screens */
+  /* border-radius: 1em; */
+  display: flex;
+  justify-content: center;
+  
+}
+
+/* Media query for medium-sized screens */
+@media (min-width: 768px) {
+  .filter-menu {
+    max-width: 60%; /* Adjust the maximum width as needed */
+  }
+}
+
+/* Media query for large screens */
+@media (min-width: 992px) {
+  .filter-menu {
+    max-width: 100%; /* Adjust the maximum width as needed */
+  }
+}
+
+
+.cart-header {
+  background-color: rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+  width: 100%;
+  height: 100%;
+}
+
+/* .cart-total {
+  background-color: white;
+  border-radius: 1em;
+  width: 250px;
+  height: 200px;
+  position: fixed;
+} */
+
+/* Base styles for all screen sizes */
+.cart-total {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+b {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+Button {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Custom CSS for small screens */
+@media (max-width: 576px) {
+  .cart-total {
+    /* Custom styles for small screens */
+    padding: 0.5rem;
+  }
+}
+
+/* Custom CSS for medium screens */
+@media (min-width: 577px) and (max-width: 992px) {
+  .cart-total {
+    /* Custom styles for medium screens */
+    padding: 1rem;
+  }
+}
+
+/* Custom CSS for large screens */
+@media (min-width: 993px) {
+  .cart-total {
+    /* Custom styles for large screens */
+    padding: 1.5rem;
+  }
+}
+
+
+.cart-title {
+  background-color: rgb(255, 255, 255);
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-size: 1.5em;
+  border-radius: 0.5em;
+}
+
+.cart-item {
+ padding-bottom:25em;
+}
+/* .card-img-top {
+  max-height: 200px;
+  width: 100%;
+  object-fit: cover !important;
+} */
+
+.order-success {
+  background-color: lightblue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.your-orders {
+  background-color: #959599;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+.your-orders-title {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.admin-home {
+  background-color: #f8f9f9;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.all-orders {
+  background-color:#959599;
+  /* width: 100%;
+  height: 100vh; */
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  width: 100%; /* You can adjust the width as needed */
+}
+
+
+.add-products {
+  width: 25em;
+  background-color: #959599;
+  height: 100vh;
+}
+
+  .amount-cart {
+padding-left: 10px;
+margin-right: 10px;
+ }
+ 
+
+
+.footer {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  text-align: center;
+  position:relative;
+  bottom: 0;
+  width: 100%;
 }
